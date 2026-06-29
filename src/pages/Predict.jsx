@@ -29,7 +29,7 @@ export default function Predict() {
 
         const response = await API.post("/predict", {
 
-            coin: coin
+            coin: coin.trim().toLowerCase()
 
         });
 
@@ -130,6 +130,9 @@ export default function Predict() {
                         value={coin}
 
                         onChange={(e)=>setCoin(e.target.value)}
+                            autoCapitalize="none"
+                            autoCorrect="off"
+                            spellCheck={false}
 
                         placeholder="Search cryptocurrency (bitcoin, ethereum...)"
 
