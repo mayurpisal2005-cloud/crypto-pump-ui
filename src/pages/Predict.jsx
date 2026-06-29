@@ -27,7 +27,7 @@ export default function Predict() {
 
         setLoading(true);
 
-        const response = await API.post("/predict-coin", {
+        const response = await API.post("/predict", {
 
             coin: coin
 
